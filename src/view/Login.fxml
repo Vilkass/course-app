@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+	prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.LoginController">
+	<children>
+		<Label layoutX="76.0" layoutY="50.0" text="Sign in"
+			textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="24.0" />
+			</font>
+		</Label>
+		<Label layoutX="30.0" layoutY="108.0" text="Username"
+			textFill="WHITE" />
+		<Label layoutX="31.0" layoutY="169.0" text="Password"
+			textFill="WHITE" />
+		<TextField fx:id="loginUser" layoutX="30.0" layoutY="131.0" />
+		<PasswordField fx:id="loginPass" layoutX="30.0"
+			layoutY="200.0" />
+		<Button fx:id="loginBtn" layoutX="140.0" layoutY="273.0"
+			mnemonicParsing="false" onAction="#logIn" text="Login"
+			textFill="WHITE" />
+		<Label layoutX="415.0" layoutY="50.0" text="Register"
+			textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="24.0" />
+			</font>
+		</Label>
+		<Label layoutX="367.0" layoutY="108.0" text="Username"
+			textFill="WHITE" />
+		<TextField fx:id="regName" layoutX="361.0" layoutY="131.0" />
+		<Label layoutX="368.0" layoutY="169.0" text="Password"
+			textFill="WHITE" />
+		<PasswordField fx:id="regPass" layoutX="361.0"
+			layoutY="200.0" />
+		<Label layoutX="368.0" layoutY="236.0" text="Confirm password"
+			textFill="WHITE" />
+		<PasswordField fx:id="regConfirmPass" layoutX="361.0"
+			layoutY="260.0" />
+		<Button fx:id="registerBtn" layoutX="457.0" layoutY="332.0"
+			mnemonicParsing="false" onAction="#register" text="Register"
+			textFill="WHITE" />
+		<RadioButton fx:id="loginAdminCheck" layoutX="115.0"
+			layoutY="244.0" mnemonicParsing="false" selected="true" text="Admin"
+			textFill="WHITE">
+			<toggleGroup>
+				<ToggleGroup fx:id="group1" />
+			</toggleGroup>
+		</RadioButton>
+		<RadioButton fx:id="loginStudentCheck" layoutX="31.0"
+			layoutY="244.0" mnemonicParsing="false" selected="true"
+			text="Student" textFill="WHITE" toggleGroup="$group1" />
+		<RadioButton fx:id="regAdminCheck" layoutX="454.0"
+			layoutY="302.0" mnemonicParsing="false" text="Admin" textFill="WHITE">
+			<toggleGroup>
+				<ToggleGroup fx:id="group2" />
+			</toggleGroup>
+		</RadioButton>
+		<RadioButton fx:id="regStudentCheck" layoutX="370.0"
+			layoutY="302.0" mnemonicParsing="false" selected="true"
+			text="Student" textFill="WHITE" toggleGroup="$group2" />
+	</children>
+</AnchorPane>
